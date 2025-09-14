@@ -173,8 +173,10 @@ public class Main {
      * helloName("X") → "Hello X!"
      */
     public String helloName(String name) {
-        // TODO: write method body
-        return null;
+    
+        String hello = "Hello "+name+"!";
+        
+        return hello;
     }
 
     /**
@@ -186,8 +188,14 @@ public class Main {
      * lastTwo("ab") → "ba"
      */
     public String lastTwo(String str) {
-        // TODO: write method body
-        return null;
+        char[] arr = str.toCharArray();
+        int size =  arr.length;
+        char b = arr[size-1];
+        arr[size-1] = arr[size-2];
+        arr[size-2] = b;
+        str = new String(arr);
+        
+        return str;
     }
 
     /**
@@ -198,8 +206,14 @@ public class Main {
      * middleTwo("Practice") → "ct"
      */
     public String middleTwo(String str) {
-        // TODO: write method body
-        return null;
+        
+        char[] arr = str.toCharArray();
+        int size =  arr.length;
+
+        char[] b = {arr[(size/2)-1], arr[size/2]};
+
+        str = new String(b);
+        return str;
     }
 
 
