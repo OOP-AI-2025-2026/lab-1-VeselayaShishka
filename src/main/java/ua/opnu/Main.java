@@ -155,8 +155,8 @@ public class Main {
      */
     public boolean array123(int[] nums) {
         int size = nums.length;
-       for(int i = 0; i < size; i++){
-           if(i+2 <= size && nums[i]==1 && nums[i+1]==2 && nums[i+2]==3){
+       for(int i = 0; i < size-2; i++){
+           if(nums[i]==1 && nums[i+1]==2 && nums[i+2]==3){
               return true;
            }
        }
