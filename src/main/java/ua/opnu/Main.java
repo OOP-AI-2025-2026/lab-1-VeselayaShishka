@@ -30,7 +30,9 @@ public class Main {
      * in1020(8, 99) → false
      */
     public boolean in1020(int a, int b) {
-        // TODO: write method body
+         if ((a>=10&&a<=20)||(b>=10&&b<=20)){
+            return true;
+        }
         return false;
     }
 
@@ -43,7 +45,9 @@ public class Main {
      * hasTeen(20, 10, 13) → true
      */
     public boolean hasTeen(int a, int b, int c) {
-        // TODO: write method body
+        if ((a>=13&&a<=19)||(b>=13&&b<=19)||(c>=13&&c<=19)){
+            return true;
+        }
         return false;
     }
 
@@ -58,8 +62,10 @@ public class Main {
      * sleepIn(false, true) → true
      */
     public boolean sleepIn(boolean weekday, boolean vacation) {
-        // TODO: write method body
-        return false;
+        if ((weekday == true && vacation == false)){
+            return false;
+        }
+        return true;
     }
 
     /**
