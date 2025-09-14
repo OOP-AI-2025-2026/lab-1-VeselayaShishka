@@ -77,7 +77,9 @@ public class Main {
      * monkeyTrouble(true, false) → false
      */
     public boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
-        // TODO: write method body
+         if ((aSmile == true) && (bSmile == true)||(aSmile == false) && (bSmile == false)) {
+            return true;
+        }
         return false;
     }
 
@@ -90,7 +92,15 @@ public class Main {
      * posNeg(-4, -5, true) → true
      */
     public boolean posNeg(int a, int b, boolean negative) {
-        // TODO: write method body
+         
+        if (negative == true) {
+            if(a<0&&b<0){
+               return true;
+            }
+        }
+        if((a<0&&b>0)||(b<0&&a>0)){
+            return true;
+        }
         return false;
     }
 
