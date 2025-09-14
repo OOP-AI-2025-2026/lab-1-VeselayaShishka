@@ -117,12 +117,12 @@ public class Main {
     public int arrayCount9(int[] nums) {
         int size = nums.length;
         int max = 0;
-        for(int i = 0; i < 9; i++){
+        for(int i = 0; i <= size; i++){
             if(i == size){i=0;}
             max++;
             if (max ==9){
-                System.out.println(nums[i]);
-                return 0;
+                
+                return i;
             }
         }
         return 0;
@@ -156,7 +156,7 @@ public class Main {
     public boolean array123(int[] nums) {
         int size = nums.length;
        for(int i = 0; i < size; i++){
-           if(nums[i]==1 && nums[i+1]==2 && nums[i+2]==3){
+           if(i+2 = size && nums[i]==1 && nums[i+1]==2 && nums[i+2]==3){
               return true;
            }
        }
