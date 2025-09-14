@@ -114,7 +114,16 @@ public class Main {
      * arrayCount9([1, 9, 9, 3, 9]) → 3
      */
     public int arrayCount9(int[] nums) {
-        // TODO: write method body
+        int size = nums.length;
+        int max = 0;
+        for(int i = 0; i < 9; i++){
+            if(i == size){i=0;}
+            max++;
+            if (max ==9){
+                System.out.println(nums[i]);
+                return;
+            }
+        }
         return 0;
     }
 
@@ -127,7 +136,13 @@ public class Main {
      * arrayFront9([1, 2, 3, 4, 5]) → false
      */
     public boolean arrayFront9(int[] nums) {
-        // TODO: write method body
+        int size = nums.length;
+        for(int i = 0; i < size; i++){
+            if(i<4 && nums[i]==9) {
+                System.out.println("0");
+                return true;
+            }
+        }
         return false;
     }
 
@@ -139,7 +154,12 @@ public class Main {
      * array123([1, 1, 2, 1, 2, 3]) → true
      */
     public boolean array123(int[] nums) {
-        // TODO: write method body
+        int size = nums.length;
+       for(int i = 0; i < size; i++){
+           if(nums[i]==1 && nums[i+1]==2 && nums[i+2]==3){
+              return true;
+           }
+       }
         return false;
     }
 
