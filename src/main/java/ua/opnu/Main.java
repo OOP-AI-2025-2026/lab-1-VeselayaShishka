@@ -15,7 +15,10 @@ public class Main {
      * icyHot(2, 120) → false
      */
     public boolean icyHot(int temp1, int temp2) {
-        // TODO: write method body
+        if((temp1 < 0 && temp2 > 100) || (temp2 < 0 && temp1 > 100)){
+            return true;
+}
+
         return false;
     }
 
@@ -27,7 +30,9 @@ public class Main {
      * in1020(8, 99) → false
      */
     public boolean in1020(int a, int b) {
-        // TODO: write method body
+         if ((a>=10&&a<=20)||(b>=10&&b<=20)){
+            return true;
+        }
         return false;
     }
 
@@ -40,7 +45,9 @@ public class Main {
      * hasTeen(20, 10, 13) → true
      */
     public boolean hasTeen(int a, int b, int c) {
-        // TODO: write method body
+        if ((a>=13&&a<=19)||(b>=13&&b<=19)||(c>=13&&c<=19)){
+            return true;
+        }
         return false;
     }
 
@@ -55,8 +62,10 @@ public class Main {
      * sleepIn(false, true) → true
      */
     public boolean sleepIn(boolean weekday, boolean vacation) {
-        // TODO: write method body
-        return false;
+        if ((weekday == true && vacation == false)){
+            return false;
+        }
+        return true;
     }
 
     /**
@@ -68,7 +77,9 @@ public class Main {
      * monkeyTrouble(true, false) → false
      */
     public boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
-        // TODO: write method body
+         if ((aSmile == true) && (bSmile == true)||(aSmile == false) && (bSmile == false)) {
+            return true;
+        }
         return false;
     }
 
@@ -81,7 +92,16 @@ public class Main {
      * posNeg(-4, -5, true) → true
      */
     public boolean posNeg(int a, int b, boolean negative) {
-        // TODO: write method body
+         
+        if (negative == true) {
+            if(a<0&&b<0){
+               return true;
+            }
+            else return false;
+        }
+        if((a<0&&b>0)||(b<0&&a>0)){
+            return true;
+        }
         return false;
     }
 
@@ -95,8 +115,14 @@ public class Main {
      * arrayCount9([1, 9, 9, 3, 9]) → 3
      */
     public int arrayCount9(int[] nums) {
-        // TODO: write method body
-        return 0;
+        int size = nums.length;
+        int a = 0;
+        for(int i = 0; i < size; i++){
+            if(nums[i] == 9){
+                a++;
+            }  
+        }
+          return a;
     }
 
     /**
@@ -108,7 +134,12 @@ public class Main {
      * arrayFront9([1, 2, 3, 4, 5]) → false
      */
     public boolean arrayFront9(int[] nums) {
-        // TODO: write method body
+        int size = nums.length;
+        for(int i = 0; i < size; i++){
+            if(i<4 && nums[i]==9) {
+                return true;
+            }
+        }
         return false;
     }
 
@@ -120,7 +151,12 @@ public class Main {
      * array123([1, 1, 2, 1, 2, 3]) → true
      */
     public boolean array123(int[] nums) {
-        // TODO: write method body
+        int size = nums.length;
+       for(int i = 0; i < size-2; i++){
+           if(nums[i]==1 && nums[i+1]==2 && nums[i+2]==3){
+              return true;
+           }
+       }
         return false;
     }
 
@@ -134,8 +170,10 @@ public class Main {
      * helloName("X") → "Hello X!"
      */
     public String helloName(String name) {
-        // TODO: write method body
-        return null;
+    
+        String hello = "Hello "+name+"!";
+        
+        return hello;
     }
 
     /**
@@ -147,8 +185,17 @@ public class Main {
      * lastTwo("ab") → "ba"
      */
     public String lastTwo(String str) {
-        // TODO: write method body
-        return null;
+        char[] arr = str.toCharArray();
+        int size =  arr.length;
+        if(size<2){
+            return str;
+        }
+        char b = arr[size-1];
+        arr[size-1] = arr[size-2];
+        arr[size-2] = b;
+        str = new String(arr);
+        
+        return str;
     }
 
     /**
@@ -159,8 +206,14 @@ public class Main {
      * middleTwo("Practice") → "ct"
      */
     public String middleTwo(String str) {
-        // TODO: write method body
-        return null;
+        
+        char[] arr = str.toCharArray();
+        int size =  arr.length;
+
+        char[] b = {arr[(size/2)-1], arr[size/2]};
+
+        str = new String(b);
+        return str;
     }
 
 
