@@ -121,7 +121,7 @@ public class Main {
             max++;
             if (max ==9){
                 System.out.println(nums[i]);
-                return;
+                return 0;
             }
         }
         return 0;
