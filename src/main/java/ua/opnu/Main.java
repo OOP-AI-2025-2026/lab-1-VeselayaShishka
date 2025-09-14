@@ -116,15 +116,13 @@ public class Main {
      */
     public int arrayCount9(int[] nums) {
         int size = nums.length;
-        int max = 0;
+        int a = 0;
         for(int i = 0; i <= size; i++){
-            if(i == size){i=0;}
-            max++;
-            if (max ==9){
-                
-                return i;
-            }
+            if(nums[i] == 9){
+                a++;
+            }  
         }
+          return a;
     }
 
     /**
