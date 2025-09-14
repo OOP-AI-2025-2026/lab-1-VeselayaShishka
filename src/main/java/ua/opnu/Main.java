@@ -139,7 +139,6 @@ public class Main {
         int size = nums.length;
         for(int i = 0; i < size; i++){
             if(i<4 && nums[i]==9) {
-                System.out.println("0");
                 return true;
             }
         }
