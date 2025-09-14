@@ -117,7 +117,7 @@ public class Main {
     public int arrayCount9(int[] nums) {
         int size = nums.length;
         int a = 0;
-        for(int i = 0; i <= size; i++){
+        for(int i = 0; i < size; i++){
             if(nums[i] == 9){
                 a++;
             }  
@@ -187,6 +187,9 @@ public class Main {
     public String lastTwo(String str) {
         char[] arr = str.toCharArray();
         int size =  arr.length;
+        if(size<2){
+            return str;
+        }
         char b = arr[size-1];
         arr[size-1] = arr[size-2];
         arr[size-2] = b;
