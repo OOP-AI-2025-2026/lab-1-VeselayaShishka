@@ -97,6 +97,7 @@ public class Main {
             if(a<0&&b<0){
                return true;
             }
+            else return false;
         }
         if((a<0&&b>0)||(b<0&&a>0)){
             return true;
